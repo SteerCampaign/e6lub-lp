@@ -1,0 +1,437 @@
+@charset "UTF-8";
+
+@import "~bootstrap/scss/bootstrap";
+
+$primary-color: #123366;
+$primary-color-hover: #C80062;
+$footer-background-color: #07224B;
+$background-top-section-color: #FDFDFD;
+$start-gradient-orange-color: #C80062;
+$end-gradient-orange-color: #EE4E14;
+$text-input-background-color: #F7F7F7;
+$font-expo-light: "ExpoArabic-Light";
+$font-expo-book: "ExpoArabic-Book";
+$font-expo-medium: "ExpoArabic-Medium";
+$font-expo-semi-bold: "ExpoArabic-SemiBold";
+$font-expo-bold: "ExpoArabic-Bold";
+
+/**
+Loaded Fonts
+ */
+@font-face {
+  font-family: $font-expo-light;
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/ExpoArabic-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: $font-expo-book;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/ExpoArabic-Book.ttf") format("truetype");
+}
+@font-face {
+  font-family: $font-expo-medium;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/ExpoArabic-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: $font-expo-semi-bold;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ExpoArabic-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: $font-expo-bold;
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/ExpoArabic-Bold.ttf") format("truetype");
+}
+
+* {
+  color: $primary-color;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+  text-align: right;
+  font-family: $font-expo-semi-bold;
+  a {
+    color: $primary-color;
+    text-align: right;
+
+    &:hover {
+      color: $primary-color-hover;
+    }
+  }
+  p {
+    color: $primary-color;
+  }
+}
+
+/**
+Header
+ */
+.top-sections {
+  background-color: $background-top-section-color;
+  border-radius: 19px;
+  margin-top: 50px;
+  margin-bottom: 148px;
+  .section-1 {
+    padding: 85px 65px 30px 18px;
+    .logo {
+      display: block;
+      width: 100%;
+      background: url("../images/e6lub-logo.png") right no-repeat;
+      height: 56px;
+    }
+    .header-title {
+      .title {
+        margin-top: 78px;
+        margin-bottom: 0px;
+        font-family: $font-expo-book;
+        font-size: 60px;
+      }
+      .sub-title {
+        font-family: $font-expo-semi-bold;
+        font-size: 75px;
+        margin-bottom: 52px;
+      }
+    }
+    .stay-home-btn {
+      background: linear-gradient(to right, $start-gradient-orange-color, $end-gradient-orange-color);
+      display: block;
+      padding: 10px 40px;
+      color: white;
+      border-radius: 8px;
+      font-family: $font-expo-book;
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+    .pharmacy {
+      width: 100%;
+      margin-bottom: 36px;
+    }
+  }
+  .section-2 {
+    padding: 85px 52px 30px 18px;
+    .header {
+      span {
+        background: url("../images/pointer.png") right no-repeat;
+        display: inline-block;
+        width: 80px;
+        height: 98px;
+        margin-bottom: 42px;
+      }
+      h2 {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 15px;
+        margin-right: 20px;
+        font-family: $font-expo-bold;
+        font-size: 50px;
+        color: $primary-color;
+      }
+    }
+    ul {
+      li {
+        margin-bottom: 50px;
+        font-size: 22px;
+        line-height: 42px;
+        &:last-child {
+          margin-bottom: 35px;
+        }
+      }
+      .paragraph-2 {
+        font-family: $font-expo-book;
+      }
+      .paragraph-3 {
+        font-family: $font-expo-book;
+        p {
+          margin-bottom: 0;
+          font-family: $font-expo-light;
+          font-size: 19px;
+        }
+      }
+      .paragraph-4 {
+        font-family: $font-expo-book;
+      }
+      .paragraph-5, .paragraph-6, .paragraph-1 {
+        font-family: $font-expo-medium;
+      }
+    }
+    .form-product-list {
+      padding: 38px;
+      border-radius: 23px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+      height: calc(100% - 30px);;
+      .input-group {
+        .form-control {
+          font-family: $font-expo-book;
+          color: $primary-color;
+          font-size: 17px;
+          padding: 30px;
+          background-color: $text-input-background-color;
+          border: none;
+          border-radius: 8px;
+          margin-bottom: 17px;
+          &::placeholder {
+            font-family: $font-expo-light;
+            color: $primary-color;
+            font-size: 17px;
+          }
+        }
+        .textarea {
+          font-family: $font-expo-book;
+          color: $primary-color;
+          background-color: $text-input-background-color;
+          border: none;
+          padding: 20px;
+          border-radius: 8px;
+          width: 100%;
+          margin-bottom: 30px;
+          textarea {
+            padding: 10px;
+            &::placeholder {
+              font-family: $font-expo-light;
+              color: $primary-color;
+              font-size: 17px;
+            }
+          }
+        }
+      }
+      .confirm-product-list {
+        background-color: $primary-color;
+        color: white;
+        font-family: $font-expo-book;
+        font-size: 18px;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+/**
+List of products sections
+ */
+.middle-section {
+  padding: 0px 40px 30px 40px;
+  .header-title {
+    text-align: center;
+    margin-bottom: 90px;
+    .title {
+      font-family: $font-expo-bold;
+      font-size: 45px;
+    }
+    .sub-title {
+      font-family: $font-expo-semi-bold;
+      font-size: 38px;
+    }
+  }
+  .list-of-products {
+    .row {
+      margin-bottom: 50px;
+      .image {
+        height: 170px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      p.title {
+        font-size: 21px;
+        font-family: $font-expo-book;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/**
+About us footer
+ */
+.about-us-footer {
+  background: linear-gradient(to right, $start-gradient-orange-color, $end-gradient-orange-color);
+  .container-lg {
+    span {
+      width: 119px;
+      height: 119px;
+      background: url("../images/about-us.png") center center no-repeat;
+      display: block;
+      margin: auto auto 30px;
+    }
+    padding: 62px;
+    h2, p {
+      color: white;
+    }
+    h2 {
+      font-family: $font-expo-bold;
+      font-size: 45px;
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 21px;
+      font-family: $font-expo-book;
+    }
+  }
+}
+
+/**
+Links footer
+ */
+.links-footer {
+  background-color: $primary-color;
+  .container-lg {
+    .top-footer {
+      padding: 60px;
+      span {
+        width: 164px;
+        height: 56px;
+        background: url("../images/logo-white.png") center center no-repeat;
+        display: block;
+      }
+      ul {
+        padding: 0!important;
+        li {
+          margin-bottom: 20px;
+          a {
+            color: white;
+            font-family: $font-expo-medium;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+Copyright footer
+ */
+.bottom-footer {
+  background-color: $footer-background-color;
+  a {
+    color: white;
+    font-family: $font-expo-book;
+    font-size: 14px;
+    display: block;
+    padding: 17px;
+    text-align: center;
+  }
+}
+
+/**
+Mobile & iPad screens
+ */
+@media (max-width: 767px) {
+  .parent-container {
+    padding: 0px!important;
+  }
+  .section-1, .section-2, .middle-section  {
+    padding: 15px!important;
+  }
+  .top-sections {
+    margin-top: 7px;
+    margin-bottom: 40px;
+    .section-1 {
+      .col-lg-5.col-md-12, .col-lg-7.col-md-12 {
+        padding: 0!important;
+      }
+      text-align: center;
+      .logo {
+        margin-top: 80px;
+        background-position: center;
+      }
+      .header-title {
+        .title {
+          margin-top: 35px;
+          font-size: 36px;
+        }
+        .sub-title {
+          font-size: 42px;
+          margin-bottom: 15px;
+        }
+      }
+      .stay-home-btn {
+        font-size: 16px;
+        margin: auto auto 15px;
+      }
+    }
+    .section-2 {
+      padding-bottom: 38px!important;
+      .header {
+        span {
+          margin-bottom: 0px;
+        }
+        h2 {
+          font-size: 35px!important;
+        }
+      }
+      ul {
+        li {
+          margin-bottom: 17px;
+          font-size: 15px;
+          p {
+            font-size: 15px!important;
+          }
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+      }
+      .form-product-list {
+        padding: 38px 18px!important;
+        height: 100% !important;
+        .input-group {
+          margin-bottom: 0px!important;
+          >.textarea {
+            margin-bottom: 15px!important;
+            >.form-control {
+              padding: 0px!important;
+            }
+          }
+          .form-control {
+            font-size: 15px!important;
+            padding: 22px!important;
+            margin-bottom: 12px!important;
+            &::placeholder {
+              font-size: 15px!important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .middle-section {
+    .header-title {
+      .title {
+        font-size: 36px;
+      }
+      .sub-title {
+        font-size: 32px;
+      }
+    }
+  }
+  .about-us-footer {
+    text-align: center!important;
+    .container-lg {
+      padding: 40px 15px!important;
+      p {
+        font-size: 17px;
+        line-height: 30px;
+      }
+    }
+  }
+  .links-footer {
+    .top-footer {
+      padding: 30px 15px!important;
+      span {
+        margin: auto 0 30px;
+      }
+    }
+  }
+}
