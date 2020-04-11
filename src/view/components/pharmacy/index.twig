@@ -1,0 +1,11 @@
+{% extends "layouts::master.twig" %}
+{% block content %}
+    <div class="container-lg parent-container">
+        <div class="top-sections">
+            {% include 'partials/header.twig' %}
+            {% include 'partials/form.twig' %}
+        </div>
+        {% include 'partials/products.twig' %}
+    </div>
+    {% include 'partials/footer.twig' %}
+{% endblock %}

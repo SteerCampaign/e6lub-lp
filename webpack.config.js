@@ -10,7 +10,7 @@ module.exports = {
     entry: ['./src/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'app.bundle.js',
+        filename: 'assets/js/app.bundle.js',
     },
     plugins: [
         new MiniCssExtractPlugin({
@@ -18,8 +18,8 @@ module.exports = {
             chunkFilename: isDevelopment ? '[id].scss' : 'assets/css/[id].[hash].css'
         }),
         new HtmlWebPackPlugin({
-            template: './src/view/components/index.twig',
-            filename: "index.html"
+            template: './src/view/components/pharmacy/index.twig',
+            filename: "pharmacy.html"
         }),
         new CopyPlugin([
             { from: './src/assets/images', to: './assets/images' },
@@ -81,7 +81,7 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '../../[path][name].[ext]',
+                            name: '../../assets/images/[name].[ext]',
                             loader: 'image-webpack-loader',
                             options: {
                                 mozjpeg: {

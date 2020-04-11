@@ -9,6 +9,7 @@ $background-top-section-color: #FDFDFD;
 $start-gradient-orange-color: #C80062;
 $end-gradient-orange-color: #EE4E14;
 $text-input-background-color: #F7F7F7;
+
 $font-expo-light: "ExpoArabic-Light";
 $font-expo-book: "ExpoArabic-Book";
 $font-expo-medium: "ExpoArabic-Medium";
@@ -59,17 +60,17 @@ body {
   direction: rtl;
   text-align: right;
   font-family: $font-expo-semi-bold;
-  a {
-    color: $primary-color;
-    text-align: right;
-
-    &:hover {
-      color: $primary-color-hover;
-    }
+}
+a {
+  color: $primary-color;
+  text-align: right;
+  text-decoration: none!important;
+  &:hover {
+    color: $primary-color-hover;
   }
-  p {
-    color: $primary-color;
-  }
+}
+p {
+  color: $primary-color;
 }
 
 /**
@@ -110,6 +111,7 @@ Header
       font-family: $font-expo-book;
       font-size: 25px;
       margin-bottom: 30px;
+      text-align: center;
     }
     .pharmacy {
       width: 100%;
@@ -167,7 +169,22 @@ Header
       padding: 38px;
       border-radius: 23px;
       box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
-      height: calc(100% - 30px);;
+      -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+      -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+      height: calc(100% - 30px);
+      #mauticform_leadspharmaceuticalsform_fill_your_order {
+        h3:last-child {
+          font-size: 20px!important;
+        }
+      }
+      #mauticform_input_leadspharmaceuticalsform_almdynt.form-control {
+        height: auto!important;
+        background: rgb(247, 247, 247) url('../images/arrow-alt-down-fill.png') 15px no-repeat !important;
+        padding: 15px 22px!important;
+        -webkit-appearance: none!important;
+        -moz-appearance: none!important;
+        appearance: none!important;
+      }
       .input-group {
         .form-control {
           font-family: $font-expo-book;
@@ -178,7 +195,7 @@ Header
           border: none;
           border-radius: 8px;
           margin-bottom: 17px;
-          &::placeholder {
+          &::placeholder, &::-moz-placeholder, &::-webkit-input-placeholder, &::-ms-input-placeholder {
             font-family: $font-expo-light;
             color: $primary-color;
             font-size: 17px;
@@ -314,7 +331,7 @@ Copyright footer
  */
 .bottom-footer {
   background-color: $footer-background-color;
-  a {
+  span {
     color: white;
     font-family: $font-expo-book;
     font-size: 14px;
@@ -359,6 +376,7 @@ Mobile & iPad screens
       .stay-home-btn {
         font-size: 16px;
         margin: auto auto 15px;
+        display: inline-block;
       }
     }
     .section-2 {
