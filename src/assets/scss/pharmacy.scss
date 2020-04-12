@@ -1,59 +1,14 @@
-@charset "UTF-8";
-
 @import "~bootstrap/scss/bootstrap";
-
-$primary-color: #123366;
-$primary-color-hover: #C80062;
-$footer-background-color: #07224B;
-$background-top-section-color: #FDFDFD;
-$start-gradient-orange-color: #C80062;
-$end-gradient-orange-color: #EE4E14;
-$text-input-background-color: #F7F7F7;
-
-$font-expo-light: "ExpoArabic-Light";
-$font-expo-book: "ExpoArabic-Book";
-$font-expo-medium: "ExpoArabic-Medium";
-$font-expo-semi-bold: "ExpoArabic-SemiBold";
-$font-expo-bold: "ExpoArabic-Bold";
-
-/**
-Loaded Fonts
- */
-@font-face {
-  font-family: $font-expo-light;
-  font-style: normal;
-  font-weight: 100;
-  src: url("../fonts/ExpoArabic-Light.ttf") format("truetype");
-}
-@font-face {
-  font-family: $font-expo-book;
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/ExpoArabic-Book.ttf") format("truetype");
-}
-@font-face {
-  font-family: $font-expo-medium;
-  font-style: normal;
-  font-weight: 600;
-  src: url("../fonts/ExpoArabic-Medium.ttf") format("truetype");
-}
-@font-face {
-  font-family: $font-expo-semi-bold;
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/ExpoArabic-SemiBold.ttf") format("truetype");
-}
-@font-face {
-  font-family: $font-expo-bold;
-  font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/ExpoArabic-Bold.ttf") format("truetype");
-}
+@import "fonts";
+@import "variables";
 
 * {
   color: $primary-color;
 }
 
+/**
+Default
+ */
 body {
   padding: 0;
   margin: 0;

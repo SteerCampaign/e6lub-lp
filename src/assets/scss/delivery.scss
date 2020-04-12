@@ -1,0 +1,201 @@
+@import "~bootstrap/scss/bootstrap";
+@import "variables";
+
+/**
+Header
+ */
+.delivery-background-header {
+  background: url(../../assets/images/background-delivery-header.svg);
+  height: 874px;
+  background-size: cover;
+  width: 880px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.delivery-header {
+  margin-top: 190px;
+  margin-bottom: 110px;
+  .logo {
+    display: block;
+    width: 100%;
+    background: url("../images/e6lub-logo.png") right no-repeat;
+    height: 56px;
+    margin-bottom: 98px;
+  }
+  .header-title {
+    p {
+      text-align: right;
+    }
+    .title-1 {
+      font-family: $font-expo-book;
+      font-size: 63px;
+    }
+    .title-2 {
+      font-family: $font-expo-bold;
+      font-size: 47px;
+    }
+    .title-3 {
+      font-family: $font-expo-bold;
+      font-size: 85px;
+    }
+    .title-4 {
+      font-family: $font-expo-bold;
+      font-size: 60px;
+      margin-bottom: 40px;
+    }
+    .title-5 {
+      font-family: $font-expo-medium;
+      font-size: 23px;
+      line-height: 46px;
+    }
+  }
+}
+
+.why-we-order {
+  .header-title {
+    font-size: 50px;
+    font-family: $font-expo-bold;
+  }
+  .procedures {
+    .title {
+      font-size: 21px;
+    }
+  }
+}
+
+.driver-registration {
+  border-radius: 19px;
+  background-color: $background-top-section-color;
+  border: 1px solid rgba(112, 112, 112, 0.04);
+  padding: 50px 38px;
+  margin-bottom: -40px;
+  position: relative;
+  z-index: 1;
+  .img {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 30px;
+  }
+  .question {
+    font-size: 52px;
+    font-family: $font-expo-bold;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0px 40px;
+  }
+  .hint-1 {
+    text-align: center;
+    font-size: 22px;
+    font-family: $font-expo-light;
+    color: $start-gradient-orange-color;
+    margin-bottom: 20px;
+  }
+  .hint-2 {
+    text-align: center;
+    font-size: 22px;
+    font-family: $font-expo-medium;
+    padding: 0px 80px;
+  }
+  .form-driver-registration {
+    background-color: rgb(255, 255, 255);
+    padding: 38px;
+    border-radius: 23px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+    height: calc(100% - 30px);
+    label {
+      font-family: $font-expo-medium;
+      font-size: 20px;
+      font-weight: normal;
+    }
+    .mauticform_wrapper {
+      text-align: right!important;
+      #mauticform_driversapplicationform_fill_your_order {
+        display: none!important;
+      }
+    }
+    .mauticform-selectbox.form-control {
+      height: auto!important;
+      background: rgb(247, 247, 247) url('../images/arrow-alt-down-fill.png') 15px no-repeat !important;
+      padding: 15px 22px!important;
+      border: none!important;
+      border-radius: 8px!important;
+      font-family: $font-expo-book;
+      font-size: 17px;
+      -webkit-appearance: none!important;
+      -moz-appearance: none!important;
+      appearance: none!important;
+    }
+    .mauticform-radiogrp {
+      .mauticform-radiogrp-row {
+        display: inline-block;
+        margin-left: 30px;
+        .mauticform-radiogrp-radio {
+          margin-left: 7px
+        }
+      }
+    }
+    .mauticform-input, .mauticform-textarea {
+      border-radius: 8px;
+      box-sizing: border-box;
+      background-color: $text-input-background-color;
+      border: none;
+      padding: 25px;
+      font-family: $font-expo-book;
+      color: $primary-color;
+      font-size: 17px;
+      margin-bottom: 17px;
+      &::placeholder, &::-moz-placeholder, &::-webkit-input-placeholder, &::-ms-input-placeholder {
+        font-family: $font-expo-light;
+        color: $primary-color;
+        font-size: 17px;
+      }
+    }
+    .mauticform-button {
+      background-color: $primary-color;
+      color: white;
+      font-family: $font-expo-book;
+      font-size: 18px!important;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+}
+
+.delivery-about-us-footer {
+  clip-path: polygon(0 17%, 100% 0%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 17%, 100% 0%, 100% 100%, 0% 100%);
+  padding: 150px 0 100px;
+  text-align: right;
+  .container-lg {
+    padding: 0px!important;
+  }
+}
+.delivery-links-footer {
+  .container-lg {
+    .top-footer {
+      padding: 50px 15px!important;
+      div {
+        text-align: right;
+        a {
+          font-family: $font-expo-medium;
+          font-size: 16px;
+          color: #fff;
+          display: block;
+          padding: 15px;
+          &:hover {
+            color: $end-gradient-orange-color;
+          }
+        }
+      }
+    }
+  }
+}

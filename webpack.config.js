@@ -6,20 +6,36 @@ const path = require('path')
 const isDevelopment = process.env.NODE_ENV === 'development'
 
 module.exports = {
-    mode: 'production',
+    // mode: 'production',
+    mode: 'development',
     entry: ['./src/index.js'],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'assets/js/app.bundle.js',
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                styles: {
+                    name: 'styles',
+                    test: /\.scss$/,
+                    chunks: 'all',
+                    enforce: true,
+                },
+            },
+        },
+    },
     plugins: [
         new MiniCssExtractPlugin({
             filename: isDevelopment ? '[name].scss' : 'assets/css/[name].[hash].css',
-            chunkFilename: isDevelopment ? '[id].scss' : 'assets/css/[id].[hash].css'
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/pharmacy/index.twig',
             filename: "pharmacy.html"
+        }),
+        new HtmlWebPackPlugin({
+            template: './src/view/components/delivery/index.twig',
+            filename: "delivery.html"
         }),
         new CopyPlugin([
             { from: './src/assets/images', to: './assets/images' },
@@ -28,27 +44,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\style\.s(a|c)ss$/,
-                loader: [
-                    isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            sourceMap: isDevelopment,
-                        }
-                    },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: isDevelopment
-                        }
-                    }
-                ]
-            },
-            {
                 test: /\.s(a|c)ss$/,
-                exclude: /\.style.(s(a|c)ss)$/,
                 loader: [
                     isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
@@ -110,7 +106,8 @@ module.exports = {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
                 loader: 'file-loader',
                 options: {
-                    outputPath: 'assets/fonts',
+                    name: '[name].[ext]',
+                    outputPath: '/assets/fonts',
                 },
             },
         ]
