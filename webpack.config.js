@@ -4,14 +4,35 @@ const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
 
 const isDevelopment = process.env.NODE_ENV === 'development'
+const minifySettings =  {
+    html5                          : true,
+    collapseWhitespace             : true,
+    minifyCSS                      : true,
+    minifyJS                       : true,
+    minifyURLs                     : false,
+    removeAttributeQuotes          : true,
+    removeComments                 : true,
+    removeEmptyAttributes          : true,
+    removeOptionalTags             : true,
+    removeRedundantAttributes      : true,
+    removeScriptTypeAttributes     : true,
+    removeStyleLinkTypeAttributese : true,
+    useShortDoctype                : true
+  }
 
 module.exports = {
     // mode: 'production',
     mode: 'development',
-    entry: ['./src/index.js'],
+    entry: {
+        index: './src/index.js',
+        pharmacy: './src/pharmacy.js',
+        lmd: './src/lmd.js',
+        drivers: './src/drivers.js'
+    },
     output: {
+        filename: 'assets/js/[name].js',
         path: path.resolve(__dirname, 'dist'),
-        filename: 'assets/js/app.bundle.js',
+        chunkFilename: '[id].[chunkhash].js'
     },
     optimization: {
         splitChunks: {
@@ -31,11 +52,27 @@ module.exports = {
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/pharmacy/index.twig',
-            filename: "pharmacy.html"
+            filename: "pharmacy.html",
+            minify: minifySettings,
+            chunks: ['pharmacy']
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/lmd/index.twig',
-            filename: "lmd.html"
+            filename: "lmd.html",
+            minify: minifySettings,
+            chunks: ['lmd']
+        }),
+        new HtmlWebPackPlugin({
+            template: './src/view/components/index/index.twig',
+            filename: "index.html",
+            minify: minifySettings,
+            chunks: ['index']
+        }),
+        new HtmlWebPackPlugin({
+            template: './src/view/components/drivers/index.twig',
+            filename: "drivers.html",
+            minify: minifySettings,
+            chunks: ['drivers']
         }),
         new CopyPlugin([
             { from: './src/assets/images', to: './assets/images' },
