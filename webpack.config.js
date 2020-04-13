@@ -34,11 +34,14 @@ module.exports = {
             filename: "pharmacy.html"
         }),
         new HtmlWebPackPlugin({
-            template: './src/view/components/delivery/index.twig',
-            filename: "delivery.html"
+            template: './src/view/components/lmd/index.twig',
+            filename: "lmd.html"
         }),
         new CopyPlugin([
             { from: './src/assets/images', to: './assets/images' },
+        ]),
+        new CopyPlugin([
+            { from: './src/assets/fonts', to: './assets/fonts' },
         ]),
     ],
     module: {

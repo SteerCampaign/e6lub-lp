@@ -111,6 +111,15 @@ Header
       font-size: 20px;
       font-weight: normal;
     }
+    .mauticform-freehtml {
+      h3 {
+        font-family: $font-expo-medium;
+        font-size: 40px;
+      }
+      h3:last-child {
+        font-size: 25px;
+      }
+    }
     .mauticform_wrapper {
       text-align: right!important;
       #mauticform_driversapplicationform_fill_your_order {
