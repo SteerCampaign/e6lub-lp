@@ -4,6 +4,7 @@
 
 * {
   color: $primary-color;
+  text-align: right;
 }
 
 /**
@@ -127,7 +128,11 @@ Header
       -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
       -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
       height: calc(100% - 30px);
-      #mauticform_leadspharmaceuticalsform_fill_your_order {
+      .mauticform-freehtml {
+        h3 {
+          font-family: $font-expo-medium;
+          font-size: 40px;
+        }
         h3:last-child {
           font-size: 20px!important;
         }
@@ -197,6 +202,7 @@ List of products sections
     text-align: center;
     margin-bottom: 90px;
     .title {
+      text-align: center;
       font-family: $font-expo-bold;
       font-size: 45px;
     }

@@ -17,6 +17,7 @@ Header
 .delivery-header {
   margin-top: 190px;
   margin-bottom: 110px;
+  padding: 30px 30px 0;
   .logo {
     display: block;
     width: 100%;
@@ -206,5 +207,149 @@ Header
         }
       }
     }
+  }
+}
+/**
+Mobile & iPad screens
+ */
+@media (max-width: 1550px) {
+  .delivery-background-header {
+    height: 647px!important;
+    width: 650px!important;
+  }
+  .delivery-header {
+    margin-top: 30px!important;
+  }
+}
+@media (max-width: 1549px) and (min-width: 1200px) {
+  .delivery-background-header {
+    height: 447px!important;
+    width: 450px!important;
+  }
+  .delivery-header {
+    .logo {
+      margin-bottom: 30px!important;
+    }
+    .delivery-header {
+      .header-title {
+        .title-1 {
+          font-size: 40px!important;
+          margin-bottom: 5px;
+        }
+        .title-2 {
+          font-size: 30px!important;
+        }
+        .title-3 {
+          font-size: 40px!important;
+          margin-bottom: 5px!important;
+        }
+        .title-4 {
+          font-size: 25px!important;
+          margin-bottom: 20px!important;
+        }
+        .title-5 {
+          font-size: 13px!important;
+          line-height: 24px!important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1199px) and (min-width: 768px) {
+
+}
+@media (max-width: 767px) {
+  .delivery-header {
+    margin-top: 30px!important;
+    margin-bottom: -65px!important;
+    .logo {
+      background-position: center!important;
+      margin-bottom: 33px!important;
+    }
+    .title-1 {
+      font-size: 36px!important;
+      margin-bottom: 5px!important;
+    }
+    .title-2 {
+      font-size: 27px!important;
+      margin-bottom: 5px!important;
+    }
+    .title-3 {
+      font-size: 49px!important;
+      margin-bottom: 0!important;
+    }
+    .title-4 {
+      font-size: 35px!important;
+      margin-bottom: 26px!important;
+    }
+    .title-5 {
+      font-size: 18px!important;
+    }
+  }
+  .why-we-order {
+    margin-top: 650px;
+    .header-title {
+      margin-bottom: 40px!important;
+    }
+  }
+  .driver-registration {
+    background-color: transparent!important;
+    border: none!important;
+    margin-bottom: -85px!important;
+    .img {
+      padding-top: 20px;
+    }
+    .question {
+      font-size: 32px!important;
+      padding: 0px 10px!important;
+    }
+    .hint-1 {
+      font-size: 16px!important;
+    }
+    .hint-2 {
+      font-size: 18px!important;
+      padding: 0px!important;
+    }
+  }
+  .delivery-background-header {
+    display: none!important;
+  }
+  .delivery-header-mobile {
+    height: 580px;
+    width: 389px;
+    position: absolute;
+    left: -10px;
+    .delivery-background-header-mobile {
+      height: 580px;
+      width: 389px;
+      background-size: cover;
+      background: url(../../assets/images/background-delivery-header-mobile.svg) left;
+    }
+  }
+  .delivery-about-us-footer {
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)!important;
+    -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)!important;
+    padding: 100px 0 50px!important;
+    .container-lg {
+      h2, p {
+        padding: 0 30px;
+        text-align: center;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+  .delivery-links-footer {
+    .container-lg {
+      .top-footer {
+        div {
+          a {
+            padding: 5px!important;
+          }
+        }
+      }
+    }
+
   }
 }
