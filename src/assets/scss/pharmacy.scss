@@ -198,7 +198,6 @@ List of products sections
 .middle-section {
   padding: 0px 40px 30px 40px;
   .header-title {
-    text-align: center;
     margin-bottom: 90px;
     .title {
       text-align: center;
@@ -206,6 +205,7 @@ List of products sections
       font-size: 45px;
     }
     .sub-title {
+      text-align: center;
       font-family: $font-expo-semi-bold;
       font-size: 38px;
     }
@@ -399,6 +399,9 @@ Mobile & iPad screens
     text-align: center!important;
     .container-lg {
       padding: 40px 15px!important;
+      h2, p {
+        text-align: center;
+      }
       p {
         font-size: 17px;
         line-height: 30px;
