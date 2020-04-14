@@ -1,0 +1,50 @@
+@import "variables";
+/**
+Header
+ */
+.driver-background-header {
+  background: url(../../assets/images/background-driver-header.svg);
+  height: 136px;
+  width: 747px;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+}
+.driver-header {
+  margin-top: 150px;
+  margin-bottom: 110px;
+  padding: 30px 30px 0;
+  .logo {
+    display: block;
+    width: 100%;
+    background: url("../images/e6lub-logo.png") right no-repeat;
+    height: 56px;
+    margin-bottom: 98px;
+  }
+  .truck {
+
+  }
+  .header-title {
+    p {
+      text-align: right;
+    }
+    .title-1 {
+      font-family: $font-expo-book;
+      font-size: 63px;
+    }
+    .title-2 {
+      font-family: $font-expo-bold;
+      font-size: 47px;
+    }
+    .title-3 {
+      font-family: $font-expo-bold;
+      font-size: 70px;
+    }
+    .title-4 {
+      font-family: $font-expo-medium;
+      font-size: 23px;
+    }
+  }
+}

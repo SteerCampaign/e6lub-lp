@@ -5,15 +5,15 @@ Header
 .delivery-background-header {
   background: url(../../assets/images/background-delivery-header.svg);
   height: 874px;
-  background-size: cover;
   width: 880px;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   display: block;
 }
 .delivery-header {
-  margin-top: 190px;
+  margin-top: 150px;
   margin-bottom: 110px;
   padding: 30px 30px 0;
   .logo {
@@ -25,6 +25,7 @@ Header
   }
   .header-title {
     p {
+      text-align: center;
       text-align: right;
     }
     .title-1 {
@@ -53,6 +54,7 @@ Header
 }
 
 .why-we-order {
+  text-align: center;
   .header-title {
     font-size: 50px;
     font-family: $font-expo-bold;
@@ -187,33 +189,13 @@ Header
     padding: 0px!important;
   }
 }
-.delivery-links-footer {
-  .container-lg {
-    .top-footer {
-      padding: 50px 15px!important;
-      div {
-        text-align: right;
-        a {
-          font-family: $font-expo-medium;
-          font-size: 16px;
-          color: #fff;
-          display: block;
-          padding: 15px;
-          &:hover {
-            color: $end-gradient-orange-color;
-          }
-        }
-      }
-    }
-  }
-}
 /**
 Mobile & iPad screens
  */
-@media (max-width: 1550px) {
+@media (min-width: 1550px) {
   .delivery-background-header {
-    height: 647px!important;
-    width: 650px!important;
+    height: 874px;
+    width: 880px;
   }
   .delivery-header {
     margin-top: 30px!important;
@@ -221,40 +203,69 @@ Mobile & iPad screens
 }
 @media (max-width: 1549px) and (min-width: 1200px) {
   .delivery-background-header {
-    height: 447px!important;
-    width: 450px!important;
+    height: 647px!important;
+    width: 650px!important;
   }
   .delivery-header {
+    margin-top: 70px!important;
     .logo {
       margin-bottom: 30px!important;
     }
-    .delivery-header {
-      .header-title {
-        .title-1 {
-          font-size: 40px!important;
-          margin-bottom: 5px;
-        }
-        .title-2 {
-          font-size: 30px!important;
-        }
-        .title-3 {
-          font-size: 40px!important;
-          margin-bottom: 5px!important;
-        }
-        .title-4 {
-          font-size: 25px!important;
-          margin-bottom: 20px!important;
-        }
-        .title-5 {
-          font-size: 13px!important;
-          line-height: 24px!important;
-        }
+    .header-title {
+      .title-1 {
+        font-size: 55px!important;
+        margin-bottom: 5px;
+      }
+      .title-2 {
+        font-size: 50px!important;
+      }
+      .title-3 {
+        font-size: 45px!important;
+        margin-bottom: 5px!important;
+      }
+      .title-4 {
+        font-size: 40px!important;
+        margin-bottom: 30px!important;
+      }
+      .title-5 {
+        font-size: 19px!important;
+        line-height: 35px!important;
       }
     }
   }
 }
 @media (max-width: 1199px) and (min-width: 768px) {
-
+  .delivery-background-header {
+    height: 500px !important;
+    width: 508px !important;
+  }
+  .delivery-header {
+    margin-top: 50px!important;
+    .logo {
+      margin-bottom: 30px!important;
+    }
+    .header-title {
+      .title-1 {
+        font-size: 31px!important;
+        margin-bottom: 5px;
+      }
+      .title-2 {
+        font-size: 23px!important;
+      }
+      .title-3 {
+        font-size: 44px!important;
+        margin-bottom: 5px!important;
+      }
+      .title-4 {
+        font-size: 30px!important;
+        margin-bottom: 20px!important;
+      }
+      .title-5 {
+        font-size: 18px!important;
+        line-height: 24px!important;
+      }
+    }
+  }
 }
 @media (max-width: 767px) {
   .delivery-header {
@@ -337,17 +348,5 @@ Mobile & iPad screens
         font-size: 17px;
       }
     }
-  }
-  .delivery-links-footer {
-    .container-lg {
-      .top-footer {
-        div {
-          a {
-            padding: 5px!important;
-          }
-        }
-      }
-    }
-
   }
 }
