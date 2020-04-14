@@ -24,7 +24,7 @@ Header
     margin-bottom: 98px;
   }
   .truck {
-
+    width: 100% !important;
   }
   .header-title {
     p {
@@ -40,11 +40,85 @@ Header
     }
     .title-3 {
       font-family: $font-expo-bold;
-      font-size: 70px;
+      font-size: 68px;
     }
     .title-4 {
       font-family: $font-expo-medium;
       font-size: 23px;
     }
+  }
+}
+.driver-registration {
+  margin-bottom: 140px!important;
+}
+.is-that-you {
+  .footer-title {
+    .title {
+      font-family: $font-expo-semi-bold;
+      font-size: 37px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .driver-background-header {
+    background: url(../../assets/images/driver-mobile-header.svg);
+    height: 58px;
+    width: 214px;
+  }
+  .mobile-truck {
+    display: flex;
+    order: 2;
+  }
+  .driver-header {
+    margin-top: 90px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+    .logo {
+      background-position: center;
+      margin-bottom: 34px;
+    }
+    .header-title {
+      p {
+        text-align: right;
+      }
+      .title-1 {
+        font-family: $font-expo-book;
+        font-size: 36px;
+      }
+      .title-2 {
+        font-family: $font-expo-bold;
+        font-size: 27px;
+      }
+      .title-3 {
+        font-family: $font-expo-bold;
+        font-size: 40px;
+      }
+      .title-4 {
+        font-family: $font-expo-medium;
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .driver-registration-2 {
+    margin-bottom: 100px !important;
+    img {
+      width: 169px;
+    }
+    .form-driver-registration {
+      padding: 25px!important;
+    }
+  }
+  .is-that-you {
+    .header-title {
+      .title {
+        font-size: 32px!important;
+      }
+    }
+  }
+  .job-details {
+    margin-top: 100px!important;
   }
 }
