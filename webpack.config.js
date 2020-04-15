@@ -27,7 +27,8 @@ module.exports = {
         index: './src/index.js',
         pharmacy: './src/pharmacy.js',
         lmd: './src/lmd.js',
-        drivers: './src/drivers.js'
+        drivers: './src/drivers.js',
+        groceries: './src/groceries.js'
     },
     output: {
         filename: 'assets/js/[name].js',
@@ -49,6 +50,12 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: isDevelopment ? '[name].scss' : 'assets/css/[name].[hash].css',
+        }),
+        new HtmlWebPackPlugin({
+            template: './src/view/components/groceries/index.twig',
+            filename: "groceries.html",
+            minify: minifySettings,
+            chunks: ['groceries']
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/pharmacy/index.twig',
@@ -80,6 +87,10 @@ module.exports = {
         new CopyPlugin([
             { from: './src/assets/fonts', to: './assets/fonts' },
         ]),
+        new CopyPlugin([
+            { from: './src/statics', to: './' },
+        ]),
+
     ],
     module: {
         rules: [
