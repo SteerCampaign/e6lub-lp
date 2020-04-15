@@ -20,9 +20,7 @@ const minifySettings =  {
     useShortDoctype                : true
 };
 
-module.exports = {
-    // mode: 'production',
-    mode: 'development',
+module.exports = {    
     entry: {
         index: './src/index.js',
         pharmacy: './src/pharmacy.js',
@@ -34,18 +32,6 @@ module.exports = {
         filename: 'assets/js/[name].js',
         path: path.resolve(__dirname, 'dist'),
         chunkFilename: '[id].[chunkhash].js'
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                styles: {
-                    name: 'styles',
-                    test: /\.scss$/,
-                    chunks: 'all',
-                    enforce: true,
-                },
-            },
-        },
     },
     plugins: [
         new MiniCssExtractPlugin({

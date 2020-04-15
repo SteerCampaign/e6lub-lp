@@ -1,4 +1,32 @@
 @import "variables";
+* {
+  color: $primary-color;
+  text-align: right;
+}
+
+/**
+Default
+ */
+body {
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+  text-align: right;
+  font-family: $font-expo-semi-bold;
+}
+a {
+  color: $primary-color;
+  text-align: right;
+  text-decoration: none!important;
+  &:hover {
+    color: $primary-color-hover;
+  }
+}
+p {
+  color: $primary-color;
+}
+
+
 /**
 Header
  */
@@ -122,3 +150,4 @@ Header
     margin-top: 100px!important;
   }
 }
+@import "footer"
