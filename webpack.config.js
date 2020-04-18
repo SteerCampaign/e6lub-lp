@@ -26,7 +26,8 @@ module.exports = {
         pharmacy: './src/pharmacy.js',
         lmd: './src/lmd.js',
         drivers: './src/drivers.js',
-        groceries: './src/groceries.js'
+        groceries: './src/groceries.js',
+        bulk: './src/bulk.js'
     },
     output: {
         filename: 'assets/js/[name].js',
@@ -56,6 +57,12 @@ module.exports = {
             chunks: ['lmd']
         }),
         new HtmlWebPackPlugin({
+            template: './src/view/components/bulk/index.twig',
+            filename: "bulk.html",
+            minify: minifySettings,
+            chunks: ['bulk']
+        }),
+        new HtmlWebPackPlugin({
             template: './src/view/components/index/index.twig',
             filename: "index.html",
             minify: minifySettings,
@@ -76,7 +83,6 @@ module.exports = {
         new CopyPlugin([
             { from: './src/statics', to: './' },
         ]),
-
     ],
     module: {
         rules: [

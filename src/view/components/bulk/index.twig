@@ -1,0 +1,12 @@
+{% extends "layouts::master.twig" %}
+{% block title %}اطلب - خدمات توصيل للشركات{% endblock %}
+{% block description %}خدمات توصيل للشركات ومواقع التجارة الالكترونية{% endblock %}
+
+{% block content %}
+    <div class="bulk-background-header"></div>
+    <div class="container-lg parent-container">
+        {% include 'partials/header.twig' %}
+        {% include 'partials/where-to-deliver.twig' %}
+        {% include 'partials/form.twig' %}
+    </div>
+{% endblock %}

@@ -29,7 +29,10 @@ p {
 /**
 Header
  */
-.delivery-background-header {
+.bulk-header-mobile {
+  display: none;
+}
+.bulk-background-header {
   background: url(../../assets/images/background-delivery-header.svg);
   height: 874px;
   width: 880px;
@@ -39,9 +42,9 @@ Header
   left: 0;
   display: block;
 }
-.delivery-header {
+.bulk-header {
   margin-top: 150px;
-  margin-bottom: 110px;
+  margin-bottom: 180px;
   padding: 30px 30px 0;
   .logo {
     display: block;
@@ -65,35 +68,44 @@ Header
     }
     .title-3 {
       font-family: $font-expo-bold;
-      font-size: 85px;
-    }
-    .title-4 {
-      font-family: $font-expo-bold;
-      font-size: 60px;
-      margin-bottom: 40px;
+      font-size: 65px;
     }
     .title-5 {
       font-family: $font-expo-medium;
-      font-size: 23px;
+      font-size: 26px;
       line-height: 46px;
     }
   }
 }
 
-.why-we-order {
+.where-to-deliver {
   text-align: center;
+  margin-bottom: 60px;
   .header-title {
-    font-size: 50px;
+    font-size: 30px;
     font-family: $font-expo-bold;
+    margin-bottom: 60px;
+    .title {
+      text-align: center;
+      line-height: 40px;
+    }
   }
-  .procedures {
+  .locations {
+    .image {
+      text-align: center;
+      margin-bottom: 30px;
+      img {
+        height: 150px;
+      }
+    }
     .title {
       font-size: 21px;
+      text-align: center;
     }
   }
 }
 
-.driver-registration {
+.bulk-registration {
   border-radius: 19px;
   background-color: $background-top-section-color;
   border: 1px solid rgba(112, 112, 112, 0.04);
@@ -103,8 +115,11 @@ Header
   z-index: 1;
   .img {
     text-align: center;
-    width: 60%;
-    margin: 0 auto 30px;
+    img {
+      text-align: center;
+      width: 60%;
+      margin: 0 auto 30px;
+    }
   }
   .question {
     font-size: 52px;
@@ -114,19 +129,16 @@ Header
     padding: 0px 40px;
   }
   .hint-1 {
-    text-align: center;
-    font-size: 22px;
-    font-family: $font-expo-light;
+    font-size: 26px;
+    font-family: $font-expo-medium;
     color: $start-gradient-orange-color;
     margin-bottom: 20px;
   }
-  .hint-2 {
-    text-align: center;
-    font-size: 22px;
-    font-family: $font-expo-medium;
-    padding: 0px 80px;
+  .hint-2, .hint-3 {
+    font-size: 20px;
+    font-family: $font-expo-book;
   }
-  .form-driver-registration {
+  .form-bulk-registration {
     background-color: rgb(255, 255, 255);
     padding: 38px;
     border-radius: 23px;
@@ -207,66 +219,64 @@ Header
   }
 }
 
-.delivery-about-us-footer {
-  clip-path: polygon(0 17%, 100% 0%, 100% 100%, 0% 100%);
-  -webkit-clip-path: polygon(0 17%, 100% 0%, 100% 100%, 0% 100%);
-  padding: 150px 0 100px;
-  text-align: right;
-  .container-lg {
-    padding: 0px!important;
-  }
-}
+
 /**
 Mobile & iPad screens
  */
 @media (min-width: 1550px) {
-  .delivery-background-header {
+  .bulk-header-mobile {
     height: 874px;
     width: 880px;
   }
-  .delivery-header {
+  .bulk-header {
     margin-top: 150px !important;
   }
 }
 @media (max-width: 1549px) and (min-width: 1200px) {
-  .delivery-background-header {
+  .bulk-background-header {
     height: 647px!important;
     width: 650px!important;
   }
-  .delivery-header {
+  .bulk-header {
     margin-top: 70px!important;
     .logo {
-      margin-bottom: 30px!important;
+      margin-bottom: 40px!important;
     }
     .header-title {
       .title-1 {
-        font-size: 55px!important;
-        margin-bottom: 5px;
+        font-size: 50px!important;
+        margin-bottom: 25px!important;
       }
       .title-2 {
-        font-size: 50px!important;
+        font-size: 40px!important;
+        margin-bottom: 15px!important;
       }
       .title-3 {
         font-size: 45px!important;
-        margin-bottom: 5px!important;
-      }
-      .title-4 {
-        font-size: 40px!important;
-        margin-bottom: 30px!important;
+        margin-bottom: 15px!important;
       }
       .title-5 {
-        font-size: 19px!important;
+        font-size: 22px!important;
         line-height: 35px!important;
       }
     }
   }
 }
 @media (max-width: 1199px) and (min-width: 768px) {
-  .delivery-background-header {
-    height: 500px !important;
-    width: 508px !important;
+  .bulk-background-header {
+    display: none;
   }
-  .delivery-header {
+  .bulk-header-mobile {
+    background: url(../../assets/images/background-delivery-header.svg);
+    height: 440px;
+    width: 448px;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  .bulk-header {
     margin-top: 50px!important;
     .logo {
       margin-bottom: 30px!important;
@@ -274,18 +284,15 @@ Mobile & iPad screens
     .header-title {
       .title-1 {
         font-size: 31px!important;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
       .title-2 {
         font-size: 23px!important;
+        margin-bottom: 15px;
       }
       .title-3 {
-        font-size: 44px!important;
-        margin-bottom: 5px!important;
-      }
-      .title-4 {
-        font-size: 30px!important;
-        margin-bottom: 20px!important;
+        font-size: 35px!important;
+        margin-bottom: 15px!important;
       }
       .title-5 {
         font-size: 18px!important;
@@ -293,9 +300,32 @@ Mobile & iPad screens
       }
     }
   }
+  .bulk-registration {
+    .img {
+      img {
+        width: 40%;
+      }
+    }
+  }
 }
 @media (max-width: 767px) {
-  .delivery-header {
+  .bulk-background-header {
+    display: none;
+  }
+  .bulk-header-mobile {
+    height: 580px;
+    width: 389px;
+    position: absolute;
+    left: -10px;
+    display: block;
+    .bulk-background-header-mobile {
+      height: 580px;
+      width: 389px;
+      background-size: cover;
+      background: url(../../assets/images/background-delivery-header-mobile.svg) left no-repeat;
+    }
+  }
+  .bulk-header {
     margin-top: 30px!important;
     margin-bottom: -65px!important;
     .logo {
@@ -314,24 +344,25 @@ Mobile & iPad screens
       font-size: 49px!important;
       margin-bottom: 0!important;
     }
-    .title-4 {
-      font-size: 35px!important;
-      margin-bottom: 26px!important;
-    }
     .title-5 {
       font-size: 18px!important;
     }
   }
-  .why-we-order {
+  .where-to-deliver {
     margin-top: 650px!important;
     .header-title {
+      padding: 0 15px;
       margin-bottom: 40px!important;
+      p {
+        font-size: 26px;
+      }
     }
   }
-  .driver-registration {
+  .bulk-registration {
     background-color: transparent!important;
     border: none!important;
     margin-bottom: -85px!important;
+    padding: 15px;
     .img {
       padding-top: 20px;
     }
@@ -340,32 +371,29 @@ Mobile & iPad screens
       padding: 0px 10px!important;
     }
     .hint-1 {
-      font-size: 16px!important;
+      font-size: 20px!important;
+      text-align: center;
     }
-    .hint-2 {
+    .hint-2, .hint-3 {
+      text-align: center;
       font-size: 18px!important;
       padding: 0px!important;
     }
-  }
-  .delivery-background-header {
-    display: none!important;
-  }
-  .delivery-header-mobile {
-    height: 580px;
-    width: 389px;
-    position: absolute;
-    left: -10px;
-    .delivery-background-header-mobile {
-      height: 580px;
-      width: 389px;
-      background-size: cover;
-      background: url(../../assets/images/background-delivery-header-mobile.svg) left;
+    .form-bulk-registration {
+      margin-top: 40px;
+      padding: 15px 20px 30px;
+      .mauticform-freehtml {
+        h3 {
+          font-size: 26px;
+        }
+        h3:last-child {
+          font-size: 18px;
+        }
+      }
     }
   }
-  .delivery-about-us-footer {
-    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)!important;
-    -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%)!important;
-    padding: 100px 0 50px!important;
+  .about-us-footer {
+    padding: 70px 0 50px!important;
     .container-lg {
       h2, p {
         padding: 0 30px;
