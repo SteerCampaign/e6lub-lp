@@ -37,6 +37,10 @@ p {
   display: block;
 }
 
+#st_gdpr_iframe {
+  display: none;
+}
+
 .thanks {
   margin-top: 150px;
   .done {
@@ -82,4 +86,32 @@ p {
   }
 }
 
+@media (max-width: 767px) {
+  .thanks-background-header {
+    background: url(../../assets/images/driver-mobile-header.svg);
+    height: 58px;
+    width: 214px;
+  }
+  .thanks {
+    .header-title {
+      padding: 65px 30px 30px;
+      p {
+        font-size: 40px;
+      }
+      p:last-child {
+        margin-bottom: 0;
+        font-size: 30px;
+      }
+    }
+    .share {
+      margin-bottom: 50px;
+    }
+    .contact-us {
+      margin-top: 0px!important;
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+}
 @import "footer";
