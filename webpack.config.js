@@ -27,7 +27,8 @@ module.exports = {
         lmd: './src/lmd.js',
         drivers: './src/drivers.js',
         groceries: './src/groceries.js',
-        bulk: './src/bulk.js'
+        bulk: './src/bulk.js',
+        thank_you: './src/thank-you.js'
     },
     output: {
         filename: 'assets/js/[name].js',
@@ -61,6 +62,12 @@ module.exports = {
             filename: "bulk.html",
             minify: minifySettings,
             chunks: ['bulk']
+        }),
+        new HtmlWebPackPlugin({
+            template: './src/view/components/thank-you/index.twig',
+            filename: "thank-you.html",
+            minify: minifySettings,
+            chunks: ['thank_you']
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/index/index.twig',
