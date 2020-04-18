@@ -28,7 +28,7 @@ module.exports = {
         drivers: './src/drivers.js',
         groceries: './src/groceries.js',
         bulk: './src/bulk.js',
-        thank_you: './src/thank-you.js'
+        thanks: './src/thanks.js'
     },
     output: {
         filename: 'assets/js/[name].js',
@@ -64,10 +64,10 @@ module.exports = {
             chunks: ['bulk']
         }),
         new HtmlWebPackPlugin({
-            template: './src/view/components/thank-you/index.twig',
+            template: './src/view/components/thanks/index.twig',
             filename: "thank-you.html",
             minify: minifySettings,
-            chunks: ['thank_you']
+            chunks: ['thanks']
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/index/index.twig',

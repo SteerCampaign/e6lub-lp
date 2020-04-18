@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80.028" height="80.028" viewBox="0 0 80.028 80.028">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.036" y1="0.148" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#43afff"/>
+      <stop offset="1" stop-color="#176fd5"/>
+    </linearGradient>
+    <filter id="back" x="0" y="0" width="80.028" height="80.028" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-opacity="0.063"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="insta" transform="translate(24 63)">
+    <g transform="matrix(1, 0, 0, 1, -24, -63)" filter="url(#back)">
+      <rect id="back-2" data-name="back" width="32.028" height="32.028" rx="16.014" transform="translate(24 21)" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="Facebook" d="M24.422,5h0V7.77H23.038c-.478,0-.692.56-.692,1.038v1.731h2.077v2.769H22.345v5.538H19.576V13.308H17.5V10.539h2.077V7.77A2.769,2.769,0,0,1,22.346,5Z" transform="translate(-5.125 -37.901)" fill="#fff"/>
+  </g>
+</svg>

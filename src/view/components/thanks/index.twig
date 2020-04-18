@@ -1,14 +1,16 @@
 {% extends "layouts::master.twig" %}
 {% block title %}اطلب - توصيل من الصيدلية{% endblock %}
 {% block description %}أُطلب أي شي محتاجه من الصيدلية، وبتلاقينا جاهزين كل يوم لتوصيله. {% endblock %}
-{% block permalink %}https://now.e6lub.com/pharmacy.html{% endblock %}
+{% block permalink %}https://now.e6lub.com/thank-you.html{% endblock %}
 
 {% block content %}
+    <div class="thanks-background-header"></div>
     <div class="container-lg parent-container">
-        <div class="top-sections">
+        <div class="thanks">
             {% include 'partials/header.twig' %}
-            {% include 'partials/form.twig' %}
+            {% include 'partials/body.twig' %}
+            {% include 'partials/share.twig' %}
+            {% include 'partials/contact.twig' %}
         </div>
-        {% include 'partials/products.twig' %}
-    </div>    
+    </div>
 {% endblock %}
