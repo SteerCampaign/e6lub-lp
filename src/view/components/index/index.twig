@@ -1,1 +1,14 @@
 {% extends "layouts::master.twig" %}
+
+{% block title %}اطلب - خدمات توصيل للشركات{% endblock %}
+{% block description %}خدمات توصيل للشركات ومواقع التجارة الالكترونية{% endblock %}
+{% block permalink %}https://now.e6lub.com/{% endblock %}
+
+{% set hide_footer_about_us = true %}
+
+{% block content %}
+    <div class="index-background-header"></div>
+    {% include 'partials/header.twig' %}
+    {% include 'partials/about-us.twig' %}
+    {% include 'partials/services.twig' %}
+{% endblock %}

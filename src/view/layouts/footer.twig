@@ -1,15 +1,17 @@
 <div class="footer">
-    <div class="container-fluid about-us-footer">
-        <div class="container-lg">
-            <div class="row">
-                <div class="col-md-3 col-sm-12"><span></span></div>
-                <div class="col-md-9 col-sm-12">
-                    <h2>من نحن؟</h2>
-                    <p>اطلب هو تطبيق سعودي متخصص لتسهيل وصول طلباتك الضرورية من أدوية وأدوات صحية وطبية حتى باب منزلك بدون الحاجة للخروج؛ لدينا مسؤولين شراء متخصصين مهمّتهم توصيل طلباتكم الصيدلية في أسرع وقت.</p>
+    {% if hide_footer_about_us == false %}
+        <div class="container-fluid about-us-footer">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12"><span></span></div>
+                    <div class="col-md-9 col-sm-12">
+                        <h2>من نحن؟</h2>
+                        <p>اطلب هو تطبيق سعودي متخصص لتسهيل وصول طلباتك الضرورية من أدوية وأدوات صحية وطبية حتى باب منزلك بدون الحاجة للخروج؛ لدينا مسؤولين شراء متخصصين مهمّتهم توصيل طلباتكم الصيدلية في أسرع وقت.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    {% endif %}
     <div class="container-fluid links-footer">
         <div class="container-lg">
             <div class="top-footer">

@@ -1,1 +1,1 @@
-import './assets/scss/imd.scss';
+import './assets/scss/lmd.scss';

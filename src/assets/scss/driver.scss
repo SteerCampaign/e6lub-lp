@@ -73,12 +73,152 @@ Header
     .title-4 {
       font-family: $font-expo-medium;
       font-size: 23px;
+      line-height: 32px;
     }
   }
 }
 .driver-registration-2 {
+  padding: 38px;
+  background-color: $background-top-section-color;
+  border: 1px solid $driver-background-color;
+  border-radius: 19px;
   margin-bottom: 140px!important;
+  .img {
+    text-align: center;
+    margin-bottom: 50px;
+    img {
+      width: 50%;
+    }
+  }
+  .question {
+    margin-bottom: 25px;
+    padding: 0 57px;
+    font-size: 52px;
+    text-align: center;
+  }
+  .hint-1 {
+    color: $end-gradient-orange-color;
+    font-family: $font-expo-light;
+  }
+  .hint-1, .hint-2 {
+    font-size: 22px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .hint-2 {
+    font-family: $font-expo-medium;
+    line-height: 40px;
+  }
+  .form-driver-registration {
+    background-color: white;
+    border-radius: 23px;
+    padding: 30px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+    #mauticform_input_driversapplicationform_fill_your_order {
+      display: none;
+    }
+    .mauticform-input[type="file"] {
+      padding: 1em;
+      background: rgb(247, 247, 247);
+      border-color: rgb(247, 247, 247);
+    }
+    .mauticform-input:not([type="file"]), .mauticform-textarea {
+      border-radius: 8px;
+      box-sizing: border-box;
+      background-color: rgb(247, 247, 247);
+      border: none;
+      padding: 25px;
+      font-family: $font-expo-book;
+      color: rgb(18, 51, 102);
+      font-size: 17px;
+      margin-bottom: 17px;
+      display: block;
+      width: 100%;
+      height: calc(1.5em + 0.75rem + 2px);
+      font-weight: 400;
+      line-height: 1.5;
+      background-clip: padding-box;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    .mauticform-input:focus, .mauticform-textarea:focus {
+      color: rgb(73, 80, 87);
+      background-color: rgb(255, 255, 255);
+      border-color: rgb(128, 189, 255);
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    .mauticform-textarea {
+      width: 100%;
+      height: calc(4.5em + 0.75rem + 2px)!important;
+    }
+    .mauticform-selectbox.form-control {
+      height: auto!important;
+      background: rgb(247, 247, 247) url('../images/arrow-alt-down-fill.png') 15px no-repeat !important;
+      padding: 15px 22px!important;
+      border: none!important;
+      border-radius: 8px!important;
+      font-family: $font-expo-book;
+      font-size: 17px;
+      -webkit-appearance: none!important;
+      -moz-appearance: none!important;
+      appearance: none!important;
+    }
+    .mauticform-radiogrp {
+      .mauticform-radiogrp-row {
+        display: inline-block;
+        margin-left: 30px;
+        .mauticform-radiogrp-radio {
+          margin-left: 7px
+        }
+      }
+    }
+    .mauticform-button {
+      background-color: rgb(18, 51, 102);
+      color: rgb(255, 255, 255);
+      font-family: $font-expo-book;
+      font-size: 18px !important;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
 }
+
+.driver-lists-box {
+  margin-bottom: 60px;
+  .header-title {
+    margin-bottom: 60px;
+    text-align: center;
+    .title {
+      text-align: center;
+      font-family: $font-expo-bold;
+      font-size: 50px;
+    }
+  }
+  .driver-lists {
+    .image {
+      text-align: center;
+      margin-bottom: 30px;
+      img {
+        height: 150px;
+      }
+    }
+    .title {
+      text-align: center;
+      padding: 10px 30px;
+      margin-bottom: 30px;
+      font-size: 22px;
+      font-family: $font-expo-medium;
+    }
+  }
+}
+
 .is-that-you {
   .footer-title {
     .title {
@@ -131,12 +271,44 @@ Header
     }
   }
   .driver-registration-2 {
+    padding: 38px;
+    background-color: $background-top-section-color;
+    border: 1px solid $driver-background-color;
+    border-radius: 19px;
     margin-bottom: 100px !important;
     img {
       width: 169px;
     }
     .form-driver-registration {
       padding: 25px!important;
+    }
+    .img {
+      text-align: center;
+      margin-bottom: 50px;
+      img {
+        width: 50%;
+      }
+    }
+    .question {
+      margin-bottom: 25px;
+      padding: 0 20px;
+      font-size: 40px;
+      text-align: center;
+    }
+    .hint-1 {
+      color: $end-gradient-orange-color;
+      font-family: $font-expo-light;
+    }
+
+    .hint-1, .hint-2 {
+      font-size: 19px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hint-2 {
+      font-family: $font-expo-medium;
+      line-height: 40px;
     }
   }
   .is-that-you {
@@ -146,8 +318,24 @@ Header
       }
     }
   }
-  .job-details {
-    margin-top: 100px!important;
+  .driver-lists-box {
+    margin-bottom: 40px;
+    margin-top: 50px;
+    .header-title {
+      .title {
+        font-size: 35px;
+      }
+    }
+    .driver-lists {
+      .title {
+        font-size: 19px;
+      }
+      .image {
+        img {
+          height: 125px;
+        }
+      }
+    }
   }
 }
 @import "footer";

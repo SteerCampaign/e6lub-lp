@@ -49,7 +49,7 @@ module.exports = {
             template: './src/view/components/pharmacy/index.twig',
             filename: "pharmacy.html",
             minify: minifySettings,
-            chunks: ['pharmacy']
+            chunks: ['pharmacy'],
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/lmd/index.twig',
@@ -73,7 +73,8 @@ module.exports = {
             template: './src/view/components/index/index.twig',
             filename: "index.html",
             minify: minifySettings,
-            chunks: ['index']
+            chunks: ['index'],
+            options: {'link': 'https://now.e6lub.com/'}
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/drivers/index.twig',
