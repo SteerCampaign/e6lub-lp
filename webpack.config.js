@@ -28,7 +28,8 @@ module.exports = {
         drivers: './src/drivers.js',
         groceries: './src/groceries.js',
         bulk: './src/bulk.js',
-        thanks: './src/thanks.js'
+        thanks: './src/thanks.js',
+        lmd_english: './src/lmd-english.js',
     },
     output: {
         filename: 'assets/js/[name].js',
@@ -56,6 +57,12 @@ module.exports = {
             filename: "lmd.html",
             minify: minifySettings,
             chunks: ['lmd']
+        }),
+        new HtmlWebPackPlugin({
+            template: './src/view/components/lmd-english/index.twig',
+            filename: "lmd-english.html",
+            minify: minifySettings,
+            chunks: ['lmd_english']
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/bulk/index.twig',

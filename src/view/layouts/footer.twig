@@ -5,8 +5,13 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-12"><span></span></div>
                     <div class="col-md-9 col-sm-12">
-                        <h2>من نحن؟</h2>
-                        <p>اطلب هو تطبيق سعودي متخصص لتسهيل وصول طلباتك الضرورية من أدوية وأدوات صحية وطبية حتى باب منزلك بدون الحاجة للخروج؛ لدينا مسؤولين شراء متخصصين مهمّتهم توصيل طلباتكم الصيدلية في أسرع وقت.</p>
+                        {% if language == "ar" %}
+                            <h2>من نحن؟</h2>
+                            <p>اطلب هو تطبيق سعودي متخصص لتسهيل وصول طلباتك الضرورية من أدوية وأدوات صحية وطبية حتى باب منزلك بدون الحاجة للخروج؛ لدينا مسؤولين شراء متخصصين مهمّتهم توصيل طلباتكم الصيدلية في أسرع وقت.</p>
+                        {% else %}
+                            <h2>About us?</h2>
+                            <p>E6loub is a Saudi app dedicated to facilitate business operations, offering high quality shipping and moving services with highly qualified drivers. Moving your merchandise is never easier or safer with us.</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -19,12 +24,16 @@
                     <div class="col-lg-4 col-md-4 col-sm-12"><span></span></div>
                     <div class="col-lg-4 col-md-2 col-sm-12"></div>
                     <div class="col-lg-4 col-md-6 col-sm-12">
-                        <ul>                            
-                            <li><a href="https://now.e6lub.com/lmd.html">اطلب | خدمات توصيل البضائع  من المخازن</a></li>
-                            <li><a href="https://now.e6lub.com/pharmacy.html">اطلب | خدمات توصيل من الصيدلية</a></li>
-                            <li><a href="https://now.e6lub.com/groceries.html">اطلب | خدمات توصيل المقاضي</a></li>
-                            <li><a href="https://now.e6lub.com/drivers.php">اطلب | سجّل نفسك كقائد مركبة</a></li>
-                        </ul>
+                        {% if language == "ar" %}
+                            <ul>
+                                <li><a href="https://now.e6lub.com/lmd.html">اطلب | خدمات توصيل البضائع  من المخازن</a></li>
+                                <li><a href="https://now.e6lub.com/pharmacy.html">اطلب | خدمات توصيل من الصيدلية</a></li>
+                                <li><a href="https://now.e6lub.com/groceries.html">اطلب | خدمات توصيل المقاضي</a></li>
+                                <li><a href="https://now.e6lub.com/drivers.php">اطلب | سجّل نفسك كقائد مركبة</a></li>
+                            </ul>
+                        {% else %}
+                            <p class="title">e6lub  provides delivery solutions in Saudi</p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -32,7 +41,11 @@
     </div>
     <div class="container-fluid bottom-footer">
         <div class="container-lg">
-            <span>جميع الحقوق محفوظة لدى اطلب 2020</span>
+            {% if language == "ar" %}
+                <span>جميع الحقوق محفوظة لدى اطلب 2020</span>
+            {% else %}
+                <span>All rights reserved for e6lub 2020</span>
+            {% endif %}
         </div>
     </div>
 </div>

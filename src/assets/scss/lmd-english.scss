@@ -1,0 +1,394 @@
+@import "variables";
+* {
+  color: $primary-color;
+  text-align: left;
+}
+
+/**
+Default
+ */
+body {
+  padding: 0;
+  margin: 0;
+  direction: ltr;
+  text-align: left;
+  font-family: $font-expo-semi-bold;
+}
+a {
+  color: $primary-color;
+  text-align: left;
+  text-decoration: none!important;
+  &:hover {
+    color: $primary-color-hover;
+  }
+}
+p {
+  color: $primary-color;
+}
+
+/**
+Header
+ */
+.lmd-background-header {
+  background: url(../../assets/images/background-delivery-header.svg);
+  height: 874px;
+  width: 880px;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.lmd-header {
+  margin-top: 150px;
+  margin-bottom: 250px;
+  padding: 30px 30px 0;
+  .logo {
+    display: block;
+    width: 100%;
+    background: url("../images/e6lub-logo.png") left no-repeat;
+    height: 56px;
+    margin-bottom: 100px;
+  }
+  .header-title {
+    p {
+      text-align: left;
+    }
+    .title-1 {
+      font-family: $font-expo-book;
+      font-size: 60px;
+    }
+    .title-2 {
+      font-family: $font-expo-bold;
+      font-size: 47px;
+    }
+    .title-3 {
+      font-family: $font-expo-bold;
+      font-size: 75px;
+    }
+    .title-4 {
+      font-family: $font-expo-bold;
+      font-size: 50px;
+      margin-bottom: 40px;
+    }
+    .title-5 {
+      font-family: $font-expo-medium;
+      font-size: 23px;
+      line-height: 46px;
+    }
+  }
+}
+
+.why-we-order {
+  text-align: center;
+  .header-title {
+    font-size: 50px;
+    font-family: $font-expo-bold;
+    margin-bottom: 70px;
+    p {
+      text-align: center;
+    }
+  }
+  .procedures {
+    margin-bottom: 60px;
+    .title {
+      font-size: 23px;
+      text-align: center;
+    }
+    .image {
+      text-align: center;
+      margin-bottom: 50px;
+      img {
+        height: 170px;
+      }
+    }
+  }
+}
+
+.driver-registration {
+  border-radius: 19px;
+  background-color: $background-top-section-color;
+  border: 1px solid rgba(112, 112, 112, 0.04);
+  padding: 50px 38px;
+  margin-bottom: -40px;
+  position: relative;
+  z-index: 1;
+  .img {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 30px;
+  }
+  .question {
+    font-size: 52px;
+    font-family: $font-expo-bold;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0px 40px;
+  }
+  .hint-1 {
+    text-align: center;
+    font-size: 22px;
+    font-family: $font-expo-light;
+    color: $start-gradient-orange-color;
+    margin-bottom: 20px;
+  }
+  .hint-2 {
+    text-align: center;
+    font-size: 22px;
+    font-family: $font-expo-medium;
+    padding: 0px 80px;
+  }
+  .form-driver-registration {
+    background-color: rgb(255, 255, 255);
+    padding: 38px;
+    border-radius: 23px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.06);
+    height: calc(100% - 30px);
+    label {
+      font-family: $font-expo-medium;
+      font-size: 20px;
+      font-weight: normal;
+    }
+    .mauticform-freehtml {
+      h3 {
+        font-family: $font-expo-medium;
+        font-size: 40px;
+      }
+      h3:last-child {
+        font-size: 25px;
+      }
+    }
+    .mauticform_wrapper {
+      text-align: right!important;
+      #mauticform_driversapplicationform_fill_your_order {
+        display: none!important;
+      }
+    }
+    .mauticform-selectbox.form-control {
+      height: auto!important;
+      background: rgb(247, 247, 247) url('../images/arrow-alt-down-fill.png') right no-repeat !important;
+      padding: 15px 22px!important;
+      border: none!important;
+      border-radius: 8px!important;
+      font-family: $font-expo-book;
+      font-size: 17px;
+      -webkit-appearance: none!important;
+      -moz-appearance: none!important;
+      appearance: none!important;
+    }
+    .mauticform-radiogrp {
+      .mauticform-radiogrp-row {
+        display: inline-block;
+        margin-left: 30px;
+        .mauticform-radiogrp-radio {
+          margin-left: 7px
+        }
+      }
+    }
+    .mauticform-input, .mauticform-textarea {
+      border-radius: 8px;
+      box-sizing: border-box;
+      background-color: $text-input-background-color;
+      border: none;
+      padding: 25px;
+      font-family: $font-expo-book;
+      color: $primary-color;
+      font-size: 17px;
+      margin-bottom: 17px;
+      &::placeholder, &::-moz-placeholder, &::-webkit-input-placeholder, &::-ms-input-placeholder {
+        font-family: $font-expo-light;
+        color: $primary-color;
+        font-size: 17px;
+      }
+    }
+    .mauticform-button {
+      background-color: $primary-color;
+      color: white;
+      font-family: $font-expo-book;
+      font-size: 18px!important;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+}
+
+.links-footer {
+  .top-footer {
+    p {
+      color: #fff;
+      font-size: 15px;
+      margin-top: 30px;
+    }
+  }
+}
+
+/**
+Mobile & iPad screens
+ */
+@media (min-width: 1550px) {
+  .lmd-background-header {
+    height: 874px;
+    width: 880px;
+  }
+  .lmd-header {
+    margin-top: 150px !important;
+  }
+}
+@media (max-width: 1549px) and (min-width: 1200px) {
+  .lmd-background-header {
+    height: 647px!important;
+    width: 650px!important;
+  }
+  .lmd-header {
+    margin-top: 70px!important;
+    .logo {
+      margin-bottom: 30px!important;
+    }
+    .header-title {
+      .title-1 {
+        font-size: 55px!important;
+        margin-bottom: 5px;
+      }
+      .title-2 {
+        font-size: 50px!important;
+      }
+      .title-3 {
+        font-size: 45px!important;
+        margin-bottom: 5px!important;
+      }
+      .title-4 {
+        font-size: 40px!important;
+        margin-bottom: 30px!important;
+      }
+      .title-5 {
+        font-size: 19px!important;
+        line-height: 35px!important;
+      }
+    }
+  }
+}
+@media (max-width: 1199px) and (min-width: 768px) {
+  .lmd-background-header {
+    height: 500px !important;
+    width: 508px !important;
+  }
+  .lmd-header {
+    margin-top: 50px!important;
+    .logo {
+      margin-bottom: 30px!important;
+    }
+    .header-title {
+      .title-1 {
+        font-size: 31px!important;
+        margin-bottom: 5px;
+      }
+      .title-2 {
+        font-size: 23px!important;
+      }
+      .title-3 {
+        font-size: 44px!important;
+        margin-bottom: 5px!important;
+      }
+      .title-4 {
+        font-size: 30px!important;
+        margin-bottom: 20px!important;
+      }
+      .title-5 {
+        font-size: 18px!important;
+        line-height: 24px!important;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .lmd-header {
+    margin-top: 30px!important;
+    margin-bottom: -65px!important;
+    .logo {
+      background-position: center!important;
+      margin-bottom: 33px!important;
+    }
+    .title-1 {
+      font-size: 36px!important;
+      margin-bottom: 5px!important;
+    }
+    .title-2 {
+      font-size: 27px!important;
+      margin-bottom: 5px!important;
+    }
+    .title-3 {
+      font-size: 49px!important;
+      margin-bottom: 0!important;
+    }
+    .title-4 {
+      font-size: 35px!important;
+      margin-bottom: 26px!important;
+    }
+    .title-5 {
+      font-size: 18px!important;
+    }
+  }
+  .why-we-order {
+    margin-top: 650px!important;
+    padding: 30px;
+    .header-title {
+      margin-bottom: 40px!important;
+    }
+    .procedures {
+      padding: 0 50px;
+      >div {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .driver-registration {
+    background-color: transparent!important;
+    border: none!important;
+    margin-bottom: -85px!important;
+    .img {
+      padding-top: 20px;
+    }
+    .question {
+      font-size: 32px!important;
+      padding: 0px 10px!important;
+    }
+    .hint-1 {
+      font-size: 16px!important;
+    }
+    .hint-2 {
+      font-size: 18px!important;
+      padding: 0px!important;
+    }
+  }
+  .lmd-background-header {
+    display: none!important;
+  }
+  .lmd-header-mobile {
+    height: 580px;
+    width: 389px;
+    position: absolute;
+    right: -10px;
+    .lmd-background-header-mobile {
+      height: 580px;
+      width: 389px;
+      background-size: cover;
+      background: url(../../assets/images/background-delivery-header-mobile.svg) left;
+      -moz-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+  }
+}
+@import "footer";

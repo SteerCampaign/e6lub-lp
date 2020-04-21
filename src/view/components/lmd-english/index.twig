@@ -1,17 +1,17 @@
 {% extends "layouts::master.twig" %}
 {% block title %}اطلب - خدمات توصيل للشركات{% endblock %}
 {% block description %}خدمات توصيل للشركات ومواقع التجارة الالكترونية{% endblock %}
-{% block permalink %}https://now.e6lub.com/bulk.html{% endblock %}
+{% block permalink %}https://now.e6lub.com/lmd.html{% endblock %}
 
 {% set hide_footer_about_us = false %}
-{% set language = "ar" %}
-{% set direction = "rtl" %}
+{% set language = "en" %}
+{% set direction = "ltr" %}
 
 {% block content %}
-    <div class="bulk-background-header"></div>
+    <div class="lmd-background-header"></div>
     <div class="container-lg parent-container">
         {% include 'partials/header.twig' %}
-        {% include 'partials/where-to-deliver.twig' %}
+        {% include 'partials/why-we-order.twig' %}
         {% include 'partials/form.twig' %}
-    </div>
+    </div>    
 {% endblock %}
