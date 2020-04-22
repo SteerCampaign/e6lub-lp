@@ -1,0 +1,18 @@
+{% extends "layouts::master.twig" %}
+{% block title %}e6lub - Delivery Services{% endblock %}
+{% block description %}Delivery Services for Companies{% endblock %}
+{% block permalink %}https://now.e6lub.com/drivers-english.html{% endblock %}
+
+{% set hide_footer_about_us = false %}
+{% set language = "en" %}
+{% set direction = "ltr" %}
+
+{% block content %}
+    <div class="driver-background-header"></div>
+    <div class="container-lg parent-container">
+        {% include 'partials/header.twig' %}
+        {% include 'partials/form.twig' %}
+        {% include 'partials/job-details.twig' %}
+        {% include 'partials/is-that-you.twig' %}
+    </div>    
+{% endblock %}
