@@ -5,19 +5,19 @@ const path = require('path')
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const minifySettings =  {
-    html5                          : true,
-    collapseWhitespace             : true,
-    minifyCSS                      : true,
-    minifyJS                       : true,
-    minifyURLs                     : false,
-    removeAttributeQuotes          : true,
-    removeComments                 : true,
-    removeEmptyAttributes          : true,
-    removeOptionalTags             : true,
-    removeRedundantAttributes      : true,
-    removeScriptTypeAttributes     : true,
-    removeStyleLinkTypeAttributese : true,
-    useShortDoctype                : true
+    html5: true,
+    collapseWhitespace: true,
+    minifyCSS: true,
+    minifyJS: true,
+    minifyURLs: false,
+    removeAttributeQuotes: true,
+    removeComments: true,
+    removeEmptyAttributes: true,
+    removeOptionalTags: true,
+    removeRedundantAttributes: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributese: true,
+    useShortDoctype: true
 };
 
 module.exports = {    
@@ -30,6 +30,7 @@ module.exports = {
         bulk: './src/bulk.js',
         thanks: './src/thanks.js',
         lmd_english: './src/lmd-english.js',
+        faqs: './src/faqs.js',
     },
     output: {
         filename: 'assets/js/[name].js',
@@ -57,6 +58,12 @@ module.exports = {
             filename: "lmd.html",
             minify: minifySettings,
             chunks: ['lmd']
+        }),
+        new HtmlWebPackPlugin({
+            template: './src/view/components/faqs/index.twig',
+            filename: "faqs.html",
+            minify: minifySettings,
+            chunks: ['faqs']
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/lmd-english/index.twig',

@@ -1,0 +1,280 @@
+@import "variables";
+* {
+  color: $primary-color;
+  text-align: left;
+  direction: ltr;
+}
+
+/**
+Default
+ */
+body {
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+  text-align: right;
+  font-family: $font-expo-semi-bold;
+}
+a {
+  color: $primary-color;
+  text-align: right;
+  text-decoration: none!important;
+  &:hover {
+    color: $primary-color-hover;
+  }
+}
+p {
+  color: $primary-color;
+}
+
+
+/**
+Header
+ */
+.index-background-header {
+  background: url(../../assets/images/background-driver-header.svg);
+  height: 136px;
+  width: 747px;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+}
+.index-header {
+  margin-top: 150px;
+  padding: 30px 30px 0;
+  .logo {
+    display: block;
+    width: 100%;
+    background: url("../images/e6lub-logo.png") left no-repeat;
+    height: 56px;
+    margin-bottom: 98px;
+  }
+  header {
+    position: relative;
+    .towers-image {
+      margin-bottom: 90px;
+      .towers {
+        width: 85% !important;
+      }
+    }
+    .header-title {
+      .title-1 {
+        text-align: right;
+        font-family: $font-expo-bold;
+        font-size: 56px;
+      }
+      .title-2 {
+        text-align: right;
+        font-family: $font-expo-book;
+        font-size: 25px;
+      }
+    }
+    .bottom-header-title {
+      position: absolute;
+      bottom: 0px;
+      width: 98%;
+      left: 1%;
+      line-height: 35px;
+      background-color: $bottom-header-background-color;
+      border-radius: 16px 16px 0 0;
+      padding: 15px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+
+.card {
+  .btn-link {
+    color: $primary-color;
+    &:hover, &:visited, &:focus {
+      text-decoration: none;
+    }
+  }
+  .card-body {
+    font-family: $font-expo-light;
+  }
+}
+
+.index-about-us-fluid {
+  margin-bottom: 200px;
+  background: linear-gradient(to right, $start-gradient-orange-color, $end-gradient-orange-color);
+  .about-us-background{}
+  .index-about-us-container {
+    height: 440px;
+    border-radius: 19px;
+    position: relative;
+    padding: 50px;
+    .image {
+      position: absolute;
+      left: 0;
+      bottom: -200px;
+    }
+    .title {
+      h2 {
+        font-family: $font-expo-bold;
+        font-size: 38px;
+        margin-bottom: 40px;
+      }
+      p {
+        font-size: 23px;
+        font-family: $font-expo-medium;
+        line-height: 43px;
+      }
+      h2, p {
+        color: white;
+      }
+    }
+  }
+}
+
+.services {
+  .header {
+    h2 {
+      font-size: 56px;
+      font-family: $font-expo-bold;
+      margin-bottom: 30px;
+    }
+  }
+  .individual {
+    background-color: $primary-color;
+    .service-type {
+      padding: 55px;
+    }
+  }
+  .business {
+    background: linear-gradient(to right, $start-gradient-orange-color, $end-gradient-orange-color);
+    .service-type {
+      padding: 55px 40px;
+    }
+    .link {
+      text-align: center;
+      a {
+        display: inline-block!important;
+      }
+    }
+    .single-service {
+      padding: 0 50px;
+    }
+  }
+  .service {
+    padding: 40px 0;
+    h3 {
+      text-align: center;
+      color: #fff;
+      font-size: 30px;
+      font-family: $font-expo-bold;
+      margin-bottom: 25px;
+    }
+    .list-of-services {
+      padding: 30px;
+    }
+    .service-type {
+      background-color: #fff;
+      border-radius: 20px;
+      height: 100%;
+      .image {
+        text-align: center;
+        margin-bottom: 50px;
+        img {
+          height: 200px;
+          width: 100%;
+        }
+      }
+      .title {
+        font-family: $font-expo-book;
+        font-size: 24px;
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .link {
+        a {
+          display: block;
+          padding: 20px;
+          border-radius: 50px;
+          text-align: center;
+          background-color: $button-green-color;
+          font-size: 18px;
+          font-family: $font-expo-book;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .index-background-header {
+    background: url(../../assets/images/driver-mobile-header.svg);
+    height: 58px;
+    width: 214px;
+  }
+  .mobile-truck {
+    display: flex;
+    order: 2;
+  }
+  .index-header {
+    margin-top: 90px;
+    margin-bottom: 0px;
+    padding: 0;
+    .logo {
+      background-position: center;
+      margin-bottom: 34px;
+    }
+    header {
+      .header-title {
+        p {
+          text-align: right;
+        }
+        .title-1 {
+          font-family: $font-expo-bold;
+          font-size: 36px;
+        }
+        .title-2 {
+          font-family: $font-expo-book;
+          font-size: 22px;
+        }
+      }
+      .bottom-header-title {
+        width: 100%;
+      }
+      .towers-image {
+        margin-bottom: 230px;
+        text-align: center;
+      }
+    }
+  }
+  .index-about-us-fluid {
+    margin-bottom: 40px;
+    .index-about-us-container {
+      .image {
+        display: none;
+      }
+    }
+  }
+  .individual {
+    .list-of-services {
+      padding: 15px!important;
+      .service-mb {
+        margin-bottom: 30px;
+        .service-type {
+          padding: 30px;
+        }
+      }
+    }
+  }
+  .business {
+    .list-of-services {
+      .service-type {
+        .single-service {
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+}
+@import "footer";

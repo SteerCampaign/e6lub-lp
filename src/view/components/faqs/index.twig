@@ -2,15 +2,16 @@
 
 {% block title %}اطلب - خدمات توصيل متكاملة للأفراد والشركات{% endblock %}
 {% block description %}خدمات توصيل للشركات ومواقع التجارة الالكترونية{% endblock %}
-{% block permalink %}https://now.e6lub.com/{% endblock %}
+{% block permalink %}https://now.e6lub.com/faqs.html{% endblock %}
 
-{% set hide_footer_about_us = true %}
-{% set language = "ar" %}
-{% set direction = "rtl" %}
+{% set hide_footer_about_us = false %}
+{% set language = "en" %}
+{% set direction = "ltr" %}
 
 {% block content %}
     <div class="index-background-header"></div>
-    {% include 'partials/header.twig' %}
-    {% include 'partials/about-us.twig' %}
-    {% include 'partials/services.twig' %}
+    <div class="container-lg">
+        {% include 'partials/header.twig' %}
+        {% include 'partials/faqs.twig' %}
+    </div>
 {% endblock %}
