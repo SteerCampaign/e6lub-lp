@@ -5,19 +5,19 @@ const path = require('path')
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const minifySettings =  {
-    html5: true,
-    collapseWhitespace: true,
-    minifyCSS: true,
-    minifyJS: true,
-    minifyURLs: false,
-    removeAttributeQuotes: true,
-    removeComments: true,
-    removeEmptyAttributes: true,
-    removeOptionalTags: true,
-    removeRedundantAttributes: true,
-    removeScriptTypeAttributes: true,
-    removeStyleLinkTypeAttributese: true,
-    useShortDoctype: true
+    html5                          : true,
+    collapseWhitespace             : true,
+    minifyCSS                      : true,
+    minifyJS                       : true,
+    minifyURLs                     : false,
+    removeAttributeQuotes          : true,
+    removeComments                 : true,
+    removeEmptyAttributes          : true,
+    removeOptionalTags             : true,
+    removeRedundantAttributes      : true,
+    removeScriptTypeAttributes     : true,
+    removeStyleLinkTypeAttributese : true,
+    useShortDoctype                : true
 };
 
 module.exports = {    
@@ -30,6 +30,7 @@ module.exports = {
         bulk: './src/bulk.js',
         thanks: './src/thanks.js',
         lmd_english: './src/lmd-english.js',
+        drivers_english: './src/drivers-english.js',
         faqs: './src/faqs.js',
     },
     output: {
@@ -70,6 +71,12 @@ module.exports = {
             filename: "lmd-english.html",
             minify: minifySettings,
             chunks: ['lmd_english']
+        }),
+        new HtmlWebPackPlugin({
+            template: './src/view/components/drivers-english/index.twig',
+            filename: "drivers-english.html",
+            minify: minifySettings,
+            chunks: ['drivers_english']
         }),
         new HtmlWebPackPlugin({
             template: './src/view/components/bulk/index.twig',
